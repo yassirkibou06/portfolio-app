@@ -1,0 +1,125 @@
+@use '../../scss/' as *;
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .heroContent {
+        margin-left: 100px;
+        margin-top: 100px;
+
+        @include mobile {
+            grid-row: 2;
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        @include tablet {
+            grid-row: 2;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 40px;
+
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+
+        .typing {
+            color: $hover-color;
+            position: relative;
+            display: inline-block;
+
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 12px;
+            padding: 10px 5px;
+
+            @include mobile {
+                font-size: 9px;
+            }
+        }
+    }
+
+    .heroImg img {
+        width: 32%;
+        height: 92%;
+        position: absolute;
+        top: 5%;
+        right: 2%;
+        z-index: -99;
+
+        @include mobile {
+            position: static;
+            width: 100%;
+            padding: 15px;
+        }
+
+        @include tablet {
+            position: static;
+            width: 100%;
+            padding: 15px;
+        }
+    }
+
+    .allBtn {
+        padding: 40px 0px 0px 100px;
+
+        @include tablet {
+            padding: 40px 0px 100px 25px;
+        }
+
+        @include mobile {
+            padding: 40px 0px 160px 40px;
+        }
+
+        .btnFirst {
+            margin-right: 20px;
+            padding: 8px 40px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 500;
+            transition: .2s ease-out;
+
+            @include mobile {
+                padding: 8px 32px;
+                font-size: 17px;
+            }
+
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+
+    40%,
+    60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}

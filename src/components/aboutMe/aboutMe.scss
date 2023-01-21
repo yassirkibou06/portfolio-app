@@ -1,0 +1,113 @@
+@use '../../scss/' as *;
+
+.infos {
+
+    h2 {
+        font-weight: 500;
+        font-size: 25px;
+        margin-bottom: 20px;
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    .infosContent {
+        display: grid;
+        grid-template-columns: 260px 285px;
+
+        @include tablet {
+            grid-template-columns:  190px 190px;
+        }
+
+        @include mobile {
+            grid-template-columns: 200px 200px;
+        }
+
+        @include SmMedaimobile {
+            grid-template-columns: 170px 190px;
+        }
+
+        .left,
+        .right {
+            h4 {
+                font-weight: 500;
+                font-size: 15px;
+                padding: 15px 10px;
+
+                span {
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: gray;
+                }
+            }
+
+            @include tablet {
+                h4 {
+                    font-size: 10px;
+                    padding: 12px 8px;
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            @include mobile {
+                h4 {
+                    font-size: 10px;
+                    padding: 12px 8px;
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mySelf {
+    h2 {
+        font-weight: 500;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 15px;
+        width: 80%;
+        line-height: 2.5;
+    }
+
+    @include tablet {
+        padding-left: 7px;
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 13px;
+            line-height: 2;
+        }
+    }
+
+    @include mobile {
+        padding-left: 30px;
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 11px;
+            line-height: 2;
+        }
+    }
+}
