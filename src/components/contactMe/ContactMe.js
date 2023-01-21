@@ -41,7 +41,7 @@ const Contact = () => {
 
 
     return (
-        <div className='contact mx-11 md:mx-16 my-14 grid grid-cols-1 md:grid-cols-1 lg.grid-cols-2 justify-items-center'>
+        <div className='contact mx-11 md:mx-16 my-14 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 justify-items-center'>
             <div className='contactLeft md:mb-12'>
                 <div className='content'>
                     <h2>DON'T BE SHY !</h2>
@@ -74,7 +74,7 @@ const Contact = () => {
                     <a href='https://instagrame.com' className='socailIcon'><FaInstagram /></a>
                 </div>
             </div>
-            <div className='contactRight'>
+            <div className='contactRight mb-28 md:mb-2'>
                 <form id="myform" ref={form} onSubmit={sendEmail} action="#" autoComplete='off'>
                     <input type="text" id="fname" name="user_name" placeholder='YOUR NAME' onChange={(e) => handleChange(e)} value={name} />
                     <input type="email" id="femail" name="user_email" placeholder='YOUR EMAIL' required onChange={(e) => handleChange(e)} value={email} />
